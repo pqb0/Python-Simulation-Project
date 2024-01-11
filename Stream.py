@@ -24,7 +24,7 @@ ratio = 4 / 5
 max_r = 150
 wid = 1
 gravity = 0
-piss_strength = 15
+strength_factor = 15
 retention_factor = 1.01
 press = False
 limited = True
@@ -75,7 +75,7 @@ def particleS():
 
     if press:
         particles.append([Pspawn,
-                          [piss_strength * math.cos(theta), piss_strength * math.sin(theta)],
+                          [strength_factor * math.cos(theta), strength_factor * math.sin(theta)],
                             random.randint(3, 7),
                           color])
         
