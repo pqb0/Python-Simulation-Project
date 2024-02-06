@@ -1,4 +1,4 @@
-# Python-Simulation-Project
+# Python and c++ Simulation-Project
 
 My portfolio includes 7 simulations I created based on physics explorations of interest.
 Since I am taking IB Physics, many interesting topics have captivated my attention and I wanted to explore them with greater depth.
@@ -15,7 +15,9 @@ I make the projects because it first helped me get my mind off things, it distra
 
 For my simulations, I used Python as the programming language thanks to the programming course I took at UC Berkeley. I was presented with the idea of simulating my own physical world using the pygame module, and it is the one I have mainly used for the projects. I used VS Codium as my source-code editor because of its simple and user-friendly overlay which allowed me to get going quickly. Since I only began coding a few months ago, I had to develop my knowledge through other means because the college program was over. I began exploring different sources such as videos, discord servers, stack exchange and even decided to get Brilliant to help familiarize myself with the basics on algorithms and Python essentials. After a while it only felt natural that I should begin my own projects and so I started to create. Finally I share my project ideas with friends from the Berkeley course to help each improve.
 
- Projects:
+Furthermore I extended my codign language by learning c++ because of the limitations on my computer and its inability to process python effectively. I downloaded the Raylib package for c++ and started to code similar simulations with more optimized quality. Furthermore I was able to extend to 3rd dimen sional projects as seen in my last project available.
+
+ Python Projects:
 
  Single_Pendulum and Double_Pendulum: Using the mouse one can grab either of the pendulums and move it around and then let go.
 
@@ -28,3 +30,7 @@ simulator: The code is based on a source code for javascript known as Particle L
 Spaceship_Planets:    The SpaceshipCamara and Spaceship simulations inside the tests folder were the starting foundations for the SpaceshipPlanet simulation. The Simulation uses a spaceship to navigate around a small solar system consisting of 2 planets. One can fly around the sun and reach the other planets which are further away by using the propulsion provided by the space bar. Furthermore one can tilt the spaceship using the A and D Keys to change the direction of thrust.
 
 Stream:      This simulation is rather simple. I was playing with projectiles and I decide to make a stream of particles which would shoot at my cursor when pressing Spacebar. I added a resistive force to slow down the particles and if the 0 button is held, then a boundary circle is inserted to delimit the movement of the particles. The circle provides energy to the particles with every collision, so the velocity of the particles  increases until breaking the simulation and creating a col spiral effect. While spawning new particles, the older particles will slowly get smaller until dissapearing. Furthermore, the particles can be all deleted at once using the C key.
+
+C++ Projects:
+
+Planetary_simulation: It is a simulation in 3d of orbital gravitational motion using newtons gravitational force applying a frictive force and with different functionalities for different keys: The space button generates new balls/planets, The M button while pressed allows planets to merge, the C button clears all the planets, The "0" key disables gravitational fields and the G key strengthens the gravitational field strength.
