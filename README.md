@@ -31,6 +31,6 @@ Spaceship_Planets:    The SpaceshipCamara and Spaceship simulations inside the t
 
 Stream:      This simulation is rather simple. I was playing with projectiles and I decide to make a stream of particles which would shoot at my cursor when pressing Spacebar. I added a resistive force to slow down the particles and if the 0 button is held, then a boundary circle is inserted to delimit the movement of the particles. The circle provides energy to the particles with every collision, so the velocity of the particles  increases until breaking the simulation and creating a col spiral effect. While spawning new particles, the older particles will slowly get smaller until dissapearing. Furthermore, the particles can be all deleted at once using the C key.
 
-C++ Projects:
+C++ Projects (The c++ projects are in a second folder under the name "cppProjects"):
 
 Planetary_simulation: It is a simulation in 3d of orbital gravitational motion using newtons gravitational force applying a frictive force and with different functionalities for different keys: The space button generates new balls/planets, The M button while pressed allows planets to merge, the C button clears all the planets, The "0" key disables gravitational fields and the G key strengthens the gravitational field strength.
