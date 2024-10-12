@@ -155,7 +155,7 @@ class Ship():
         self.dimensions = [width, 2 * width]
         self.Tilt = 0
         self.angle = 0
-        self.ship_image = pygame.image.load("images/spaceship.png").convert_alpha()
+        self.ship_image = pygame.image.load("/Users/pabo/Desktop/PythonFolder1/Repo/Python-Simulation-Project/images").convert_alpha()
 
  
     def UpdatePos(self):
