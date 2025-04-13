@@ -155,8 +155,7 @@ class Ship():
         self.dimensions = [width, 2 * width]
         self.Tilt = 0
         self.angle = 0
-        self.ship_image = pygame.image.load("/Users/pabo/Desktop/PythonFolder1/Repo/Python-Simulation-Project/images").convert_alpha()
-
+        self.ship_image = pygame.image.load("/Users/pabo/Desktop/PythonFolder1/Repo/Python-Simulation-Project/images/spaceship.png")
  
     def UpdatePos(self):
         scroll[0] += self.v[0]
@@ -218,22 +217,20 @@ class Ship():
 
             
 
-            while r < min_r:
+            if r < min_r:
                 # Calculate the normal vector pointing away from the planet's center
                 normal = [self.pos[0] - sun.pos[0], self.pos[1] - sun.pos[1]]
                 normal_length = math.sqrt(normal[0]**2 + normal[1]**2)
                 normal = [normal[0] / normal_length, normal[1] / normal_length]
 
-                # Reflect the ship's velocity using the normal vector
-                dot_product = self.v[0] * normal[0] + self.v[1] * normal[1]
-                reflection = [2 * dot_product * normal[0] - self.v[0], 2 * dot_product * normal[1] - self.v[1]]
-                self.v = reflection
+                # Move the ship just outside the sun's surface
+                overlap = min_r - r
+                self.pos[0] += normal[0] * overlap
+                self.pos[1] += normal[1] * overlap
 
-                # Move the ship away from the planet's surface
-                scroll[0] += normal[0] * overlap
-                scroll[1] += normal[1] * overlap
+                # Stop the ship's motion when it lands
+                self.v = [0, 0]
 
-                break
                 
                 
 
@@ -309,12 +306,6 @@ while running:
 
     screen.fill((2, 50, 120))
     sun.drawStar(spaceship)
-
-    
-
-
-        
-        
 
     for planet in planets:
         planet.drawP(sun)
